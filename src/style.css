@@ -91,7 +91,36 @@ h4{font-size: 1rem}
 /*--------------------*/
     /*Header Style*/
 /*--------------------*/
-.inner-header .wrap{
+.inner-header{
+    line-height: 80px;
+}
+.inner-header :where(.wrap,.menu>ul),
+.list-inline >ul{
     display: flex;
     align-items: center;
+}
+.header-left, .header-right{
+    flex-grow: 1;
+}
+.header-center nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 180px;
+    max-width: 720px;
+}
+.header-center .branding{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.header-center .branding a{
+    font-family: var(--second-font);
+    font-size: 30px;
+    line-height: inherit;
+    pointer-events: auto;
 }
