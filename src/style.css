@@ -54,3 +54,44 @@ ul{
 p{
     margin: 0 0 15px;
 }
+input,textarea,select{
+    font: inherit;
+    width: 100%;
+}
+input[type=checkbox],input[type=radio]{
+    width: auto;
+}
+input::placeholder,textarea::placeholder{
+    color: inherit;
+}
+button{
+    font: inherit;
+}
+strong{
+    font-weight: var(--fw600);
+}
+h1,h2,h3,h4{
+    font-family: var(--second-font);
+    font-weight: 400;
+    line-height: normal;
+}
+h1{font-size: 2.75rem}
+h2{font-size: 2.5rem}
+h3{font-size: 2rem}
+h4{font-size: 1rem}
+
+/*--------------------*/
+    /*Reused Style*/
+/*--------------------*/
+.container{
+    max-width: var(--mx-width,1200px);
+    padding: 0 var(--gutter,15px);
+    margin: 0 auto;
+}
+/*--------------------*/
+    /*Header Style*/
+/*--------------------*/
+.inner-header .wrap{
+    display: flex;
+    align-items: center;
+}
