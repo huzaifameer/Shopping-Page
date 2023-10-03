@@ -88,6 +88,27 @@ h4{font-size: 1rem}
     padding: 0 var(--gutter,15px);
     margin: 0 auto;
 }
+.item-floating{
+    position: absolute;
+    font-size: 10px;
+    font-weight: var(--fw600);
+    top: -8px;
+    right: 0;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+/*--------------------*/
+    /*Grouped Style*/
+/*--------------------*/
+.item-floating,.header-center .branding{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*--------------------*/
     /*Header Style*/
 /*--------------------*/
@@ -103,7 +124,7 @@ h4{font-size: 1rem}
     flex-grow: 1;
 }
 .header-center nav{
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr;
     gap: 180px;
     max-width: 720px;
@@ -113,9 +134,6 @@ h4{font-size: 1rem}
     left: 0;
     right: 0;
     top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     pointer-events: none;
 }
 .header-center .branding a{
@@ -123,4 +141,45 @@ h4{font-size: 1rem}
     font-size: 30px;
     line-height: inherit;
     pointer-events: auto;
+}
+.header-center .menu > ul > li >a{
+    font-size: var(--fs14);
+    font-weight: var(--fw600);
+    text-transform: uppercase;
+    padding: 0 15px;
+    display: flex;
+    gap: 5px;
+}
+.header-right ul{
+    justify-content: flex-end;
+}
+.list-inline a, .menu-trigger{
+    position: relative;
+    font-size: 24px;
+    padding: 0 10px;
+    line-height: 1;
+    display: flex;
+    transition: var(--transition-color);
+}
+.list-inline a:hover{
+    color: var(--light-color);
+}
+.header-left .list-inline{
+    display: none;
+}
+:where(.header-left,.header-right) li{
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+@media (min-width: 992px) {
+    .menu-trigger{
+        display: none;
+    }
+    .header-center nav{
+        display: grid;
+    }
+    .header-left .list-inline{
+        display: block;
+    }
 }
