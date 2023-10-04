@@ -160,6 +160,28 @@ h4{font-size: 1rem}
 .dotgrid .product-price .before{
     color: var(--light-color);
 }
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.overlay{
+    background-color: var(--dark-color);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 999;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.overlay .active {
+    opacity: 0.75;
+    visibility: visible;
+    pointer-events: all;
+}
+
 /*--------------------*/
     /*Header Style*/
 /*--------------------*/
@@ -354,6 +376,9 @@ form.search :where(i:last-child){
     border: 0;
     height: 80px;
     font-size: 18px;
+}
+.search-float.active{
+    display: block;
 }
 /*---Header Search---*/
 
