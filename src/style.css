@@ -161,7 +161,8 @@ h4{font-size: 1rem}
     color: var(--light-color);
 }
 
-.overlay{
+.overlay,
+.mobile-menu{
     position: fixed;
     top: 0;
     bottom: 0;
@@ -226,7 +227,9 @@ h4{font-size: 1rem}
 .header-right ul{
     justify-content: flex-end;
 }
-.list-inline a, .menu-trigger{
+.list-inline a,
+.menu-trigger,
+.close-trigger{
     position: relative;
     font-size: 24px;
     padding: 0 10px;
@@ -382,6 +385,73 @@ form.search :where(i:last-child){
 }
 /*---Header Search---*/
 
+/*---Header Mobile Menu---*/
+.mobile-menu{
+    z-index: 1001;
+    pointer-events: none;
+}
+.mobile-menu .wrap{
+    position: relative;
+    max-width: calc(100% - 40px);
+    width: 360px;
+    height: 100%;
+    background-color: var(--white-color);
+    pointer-events: auto;
+}
+.mobile-menu .close-trigger,
+.mobile-menu .child-trigger{
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-menu .main-menu{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.mobile-menu nav > ul{
+    padding: 20px 0;
+}
+.mobile-menu nav > ul > li > a{
+    position: relative;
+    padding: 12px 0;
+    font-weight: 500;
+    transition: var(--transition-color);
+}
+.mobile-menu nav li :where(li,a){
+    display: block;
+}
+.mobile-menu nav > ul > li > a:hover{
+    color: var(--grey-color);
+}
+.mobile-menu .child-trigger{
+    color: var(--dark-color);
+    font-size: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: var(--transition-background);
+    z-index: 1;
+}
+.mobile-menu .child-trigger:hover{
+    background-color: var(--light-color);
+}
+.mobile-menu nav .sub-menu{
+    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+/*---Header Mobile Menu---*/
 
 /*--------------------*/
 @media (min-width: 992px) {

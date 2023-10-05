@@ -17,3 +17,6 @@ for (let i=0;i<triggerOpen.length;i++){
     targetEl.querySelector('[close-button]').addEventListener('click',openData);
     overlay.addEventListener('click',openData);
 }
+
+/*---mobile menu sub-menu---*/
+const submenu=document.querySelectorAll('.child-trigger');
