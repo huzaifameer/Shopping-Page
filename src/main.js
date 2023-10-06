@@ -37,5 +37,18 @@ const swiper = new Swiper('.sliderbox', {
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
+        clickable:true,
+    },
+});
+//Carousel
+const carousel = new Swiper('.carouselbox', {
+    spaceBetween:30,
+    slidesPerView:'auto',
+    centeredSlides:true,
+
+    // If we need pagination
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 });
