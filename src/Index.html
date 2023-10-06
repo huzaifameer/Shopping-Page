@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <title>SollydZ Mall</title>
 </head>
 <body>
@@ -206,9 +210,9 @@
   </header>
   <main>
       <div class="slider">
-          <div class="sliderbox">
-              <div class="wrap">
-                  <div class="item">
+          <div class="sliderbox swiper">
+              <div class="wrap swiper-wrapper">
+                  <div class="item swiper-slide">
                       <div class="image">
                           <div class="ob-cover">
                               <img src="../assets/slider_01.jpg" alt="">
@@ -224,6 +228,41 @@
                           </div>
                       </div>
                   </div>
+                  <div class="item swiper-slide">
+                      <div class="image">
+                          <div class="ob-cover">
+                              <img src="../assets/slider_02.jpg" alt="">
+                          </div>
+                          <div class="title-info">
+                              <div class="container wide">
+                                  <div class="wrap">
+                                      <span class="price">$65</span>
+                                      <h3 class="title">Inner world of brown</h3>
+                                      <div class="button"><a href="" class="primary-btn">Shop Now</a></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item swiper-slide">
+                      <div class="image">
+                          <div class="ob-cover">
+                              <img src="../assets/slider_03.jpg" alt="">
+                          </div>
+                          <div class="title-info">
+                              <div class="container wide">
+                                  <div class="wrap">
+                                      <span class="price">$90</span>
+                                      <h3 class="title">Great mix of colors</h3>
+                                      <div class="button"><a href="" class="primary-btn">Shop Now</a></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="custome-pagination">
+                  <div class="swiper-pagination"></div>
               </div>
           </div>
       </div>
@@ -294,6 +333,8 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
