@@ -423,6 +423,20 @@ form.search .submit{
     z-index: 1;
     cursor: pointer;
 }
+.form :where(input, textarea, select){
+    font-size: var(--fs14);
+    border: 1px solid var(--light-color);
+    outline: 0;
+    background-color: transparent;
+    padding: 10px 20px;
+    transition: border .3s;
+}
+.form :where(input, textarea, select):focus{
+    border-color: var(--dark-color);
+}
+.form :where(input, textarea, select)::placeholder{
+    color: var(--grey-color);
+}
 /*---Header Search---*/
 
 /*---Header Mobile Menu---*/
@@ -833,7 +847,7 @@ main > div .heading{
     --gutter: 0;
 }
 .frominsta .dotgrid .wrapper{
-    background-color: var(--light-color);
+    background-color: var(--flashwhite-color);
 }
 .frominsta img{
     width: 100%;
@@ -854,7 +868,7 @@ main > div .heading{
     pointer-events: none;
 }
 .frominsta .scrollto .wrapper::-webkit-scrollbar-thumb{
-    --border-color: var(--light-color);
+    --border-color: var(--flashwhite-color);
     background-color: var(--grey-color);
 }
 
@@ -887,6 +901,10 @@ main > div .heading{
 .inner-footer .search .input{
     font-size: var(--fs14);
     border: 2px solid var(--dark-color);
+}
+.inner-footer .bottom{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 /*---footer---*/
 
@@ -987,6 +1005,9 @@ main > div .heading{
     }
     .scrollto .wrapper .item{
         width: unset;
+    }
+    .inner-footer .wrap > div{
+        flex-flow: nowrap;
     }
 }
 @media (max-width: 480px) {
