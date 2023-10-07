@@ -659,8 +659,8 @@ main > div .heading{
 .guide .dot-info p{
     line-height: 1.4;
 }
-.guide .wrapper .item{
-    width: 290px;
+.scrollto .wrapper .item{
+    width: 290px !important;
     scroll-snap-align: start;
     flex-shrink: 0;
 }
@@ -810,6 +810,11 @@ main > div .heading{
     color: var(--white-color);
     border-color: var(--dark-color);
 }
+.fromblog .button{
+    text-align: center;
+    margin-top: 40px;
+}
+/*-from instagram-*/
 
 /*---fromBlog---*/
 
@@ -901,6 +906,17 @@ main > div .heading{
         border-color: var(--dark-color);
     }
     /*--slider---*/
+    .scrollto .wrapper{
+        display: grid;
+        padding: 0;
+        overflow: unset;
+        scroll-snap-type: unset;
+        overscroll-behavior-x:unset ;
+        overscroll-behavior-y:unset ;
+    }
+    .scrollto .wrapper .item{
+        width: unset;
+    }
 }
 @media (max-width: 480px) {
     .carousel .dotgrid .item{
