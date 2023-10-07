@@ -43,6 +43,20 @@ if (sorter){
         sorter.querySelector('ul').classList.toggle('show')
     }))
 }
+//tabbed
+const trigger=document.querySelectorAll('.tabbed-trigger'),
+    content=document.querySelectorAll('.tabbed > div');
+trigger.forEach((btn)=>{
+    btn.addEventListener('click',function (){
+        let dataTarget=this.dataset.id,
+            body=document.querySelector(`#${dataTarget}`);
+
+        trigger.forEach((b) => b.parentNode.classList.remove('active'));
+        trigger.forEach((s) => s.classList.remove('active'));
+        this.parentNode.classList.add('active');
+        body.classList.add('active');
+    })
+})
 
 //slider
 const swiper = new Swiper('.sliderbox', {

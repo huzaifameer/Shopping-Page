@@ -644,11 +644,11 @@ main > div .heading{
 .guide .dotgrid .wrapper{
     --grid-col:260px;
 }
-:is(.guide) .dot-image .thumbnail{
+:is(.guide,.fromblog) .dot-image .thumbnail{
     position: relative;
     opacity: unset;
 }
-.guide .dot-image .thumbnail img{
+:is(.guide,.fromblog) .dot-image .thumbnail img{
     width: 100%;
 }
 .guide .dot-title{
@@ -752,8 +752,73 @@ main > div .heading{
     background-color: var(--dark-color);
     color: var(--white-color);
 }
+.sort-data{
+    display: none;
+    animation: var(--fade);
+}
+.sort-data.active{
+    display: block;
+}
 
 /*---bycats---*/
+
+/*---banner---*/
+.banner{
+    background-color: var(--light-color);
+    background-image: url("../assets/banner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-origin: border-box;
+}
+.banner .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+.banner .content span{
+    font-size: var(--fs14);
+    text-transform: uppercase;
+}
+.banner h3{
+    --fs-max: 60px;
+}
+
+/*---banner---*/
+
+/*---fromBlog---*/
+.fromblog .dot-title{
+    --primary-font: var(--second-font);
+    --fs14: 18px;
+    --fw600: 400;
+    margin-top: 15px;
+}
+.fromblog .dot-info > a{
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid var(--light-color);
+    color: var(--grey-color);
+    padding: 1px 10px;
+    transition: var(--transition-color),
+                var(--transition-background),
+                var(--transition-border);
+}
+.fromblog .dot-info > a:hover{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-color: var(--dark-color);
+}
+
+/*---fromBlog---*/
+
+
+@media (min-width: 768px) {
+    .banner{
+        background-size: contain;
+    }
+}
 
 /*--------------------*/
 @media (min-width: 992px) {
